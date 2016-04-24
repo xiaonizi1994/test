@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .top{
+            width:500px;
+            margin:0 auto;
+            text-align: center;
+        }
+        #content{
+            width:100px;
+            height:78px;
+            margin: 20px auto;
+
+            background-color: cornflowerblue;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="top">
+        <button id="bt1">变高</button>
+        <button id="bt2">变宽</button>
+        <button id="bt3">变色</button>
+        <button id="bt4">隐藏</button>
+        <button id="bt5">重置</button>
+    </div>
+    <div id="content">
+
+    </div>
+    <script>
+        var c=document.getElementById("content");
+        var bt1=document.getElementById("bt1");
+        var bt2=document.getElementById("bt2");
+        var bt3=document.getElementById("bt3");
+        var bt4=document.getElementById("bt4");
+        var bt5=document.getElementById("bt5");
+        bt1.addEventListener("click",function(){
+            c.style.height="100px";
+
+        });
+        bt2.addEventListener("click",function(){
+            c.style.width="200px";
+         ;
+        });
+        bt3.addEventListener("click",function(){
+            c.style.background="red";
+
+        });
+        bt4.addEventListener("click",function(){
+            c.style.display="none";
+
+        });
+        bt5.addEventListener("click",function(){
+            c.style.display="block";
+            c.style.width="100px";
+            c.style.height="78px";
+            c.style.background="cornflowerblue";
+
+        });
+
+
+    </script>
+</body>
+</html>
