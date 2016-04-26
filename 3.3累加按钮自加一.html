@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align:center;
+        }
+        button{
+            width:31px;
+            height:19px;
+            font:12px arial;
+            cursor:pointer;
+
+            text-align:center;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var obtn=document.getElementsByTagName("button")[0];
+            obtn.onclick=function(){
+                obtn.innerHTML=parseInt(obtn.innerHTML)+1;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button >0
+    </button>
+</body>
+</html>

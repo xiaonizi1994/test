@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input{
+            width:58px;
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var oinput=document.getElementsByTagName("input");
+            var ospan=document.getElementsByTagName("span")[0];
+            var obtn=document.getElementsByTagName("button")[0];
+            for(var i=0;i< oinput.length;i++){
+                oinput[i].onkeyup=function(){
+                this.value=this.value.replace(/[^\d]/,"");
+                }
+            }
+            obtn.onclick= function () {
+
+                ospan.innerHTML=parseInt(oinput[0].value)+parseInt(oinput[1].value);
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <input type="text">
+    <strong>+</strong>
+    <input type="text">
+    <strong>=</strong>
+    <span>?</span>
+    <button>求和</button>
+</div>
+</body>
+</html>

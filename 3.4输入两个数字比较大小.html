@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width:50px;
+            border:1px solid #ccc;
+            background:#f0f0f0;
+            font-family:inherit;
+            padding:3px;
+        }
+        strong{padding:0 10px;}
+        span{font-weight:700;font-size:20px;color:red;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oinput=document.getElementsByTagName("input");
+            var obtn=document.getElementsByTagName("button")[0];
+            var ospan=document.getElementsByTagName("span")[0];
+            for(var i=0;i<oinput.length;i++){
+                oinput[i].onkeyup=function(){
+                    this.value=this.value.replace(/[^\d]/,"");
+                }
+            }
+            obtn.onclick=function(){
+                if(oinput[0].value==""||oinput[1].value==""){
+                    alert("请输入数字");
+                }
+                else{
+                    ospan.innerHTML=Math.max(oinput[0].value,oinput[1].value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center">
+        <input type="text">
+        <strong>vs</strong>
+        <input type="text">
+        <button>最大的数是》</button>
+        <span>?</span>
+    </div>
+</body>
+</html>
