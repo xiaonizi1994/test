@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        input{
+            width:50px;
+            border:1px solid #ccc;
+            background:#f0f0f0;
+            font-family:inherit;
+            padding:3px;}
+
+    </style>
+    <script>
+        window.onload=function(){
+            var obtn=document.getElementsByTagName("button")[0];
+            var oinput=document.getElementsByTagName("input")[0];
+            oinput.onkeyup=function(){
+                this.value=this.value.replace(/[^\d]/,"");
+            }
+//            obtn.onclick=function(){
+//                (oinput.value=="")?
+//                        alert("请输入数字"):(
+//                        (oinput.value.text(/^[\d][\d]$/))?
+//                                alert("√ 是两位数"):
+//                                alert(oInput[0].value.length + "位数"));
+//            }
+            obtn.onclick= function () {
+                oinput.value==""?
+                        alert("请输入数字"):
+                          //alert(/^\d{2}$/.test(parseInt(oinput.value))?失败
+                            //alert(parseInt(oinput.value).test(/^\d{2}$/)?失败
+                           // alert(/^\d{2}$/.test(parseInt(oinput.value))?成功
+                           alert(/^[\d][\d]$/.test(parseInt(oinput.value))?//成功了
+                                "√ 是两位数":
+                            oinput.value.length + "位数")
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text">
+    <button>是否为两位数</button>
+</body>
+</html>
