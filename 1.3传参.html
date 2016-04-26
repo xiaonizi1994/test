@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" value="北京">
+    <input type="text" value="上海">
+    <input type="button" id="btn" value="传参">
+    <script>
+        function myfn(a,b){
+            alert(a.value);
+            alert(b.value);
+        }
+        window.onload=function(){
+            var oinput=document.getElementsByTagName("input");
+            var obtn=document.getElementById("btn");
+            obtn.onclick=function() {
+                myfn(oinput[0], oinput[1]);
+            }
+        }
+    </script>
+</body>
+</html>

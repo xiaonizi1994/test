@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,dl,dt,dd,p{margin:0;padding:0;}
+        body{font-family:Tahoma;font-size:12px;}
+        label,input,a{vertical-align:middle;}
+        label{padding:0 10px 0 5px;}
+        a{color:#09f;text-decoration:none;}
+        a:hover{color:red;}
+        dl{width:320px;margin:10px auto;padding:10px 5px;border:1px solid #666;border-radius:5px;background:#fafafa;}
+        dt{padding-bottom:10px;border-bottom:1px solid #666;text-align:center;}
+        dt label{font-weight:700;}
+        p{margin-top:10px;}
+        table{margin: 10px auto;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oinput=document.getElementsByTagName("input");
+            var obtn=document.getElementsByTagName("button");
+            obtn[0].onclick=function(){
+                alert(oinput[0].value);
+            }
+            obtn[1].onclick=function(){
+                oinput[0].value="王小五";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<dl>
+    <dt>操作 input 标签</dt>
+    <dd>
+        <table>
+            <tr>
+                <td><label><input id="input" type="text" value="张小三" /></label></td>
+                <td><button id="getValueInput">取值</button><button id="setValueInput">设值</button></td>
+            </tr>
+            <tr>
+                <td><label><input type="radio" name="radio" /> 男</label> <label><input type="radio" name="radio" /> 女</label></td>
+                <td><button>取值</button><button>设值</button></td>
+            </tr>
+            <tr>
+                <td><label><input type="checkbox" name="checkbox" /> 书籍</label> <label><input type="checkbox" name="checkbox" /> 音乐</label> <label><input type="checkbox" name="checkbox" /> 运动</label></td>
+                <td><button>取值</button><button>设值</button></td>
+            </tr>
+        </table>
+    </dd>
+</dl>
+<p class="tc">1、获取表单元素当前值；2、设置更改当前值；</p>
+</body>
+</html>
